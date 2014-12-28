@@ -54,7 +54,7 @@
 
 
 
-    <md-sidenav layout="column" style="overflow: hidden; display: flex;" class="md-sidenav-left md-whiteframe-z2 md-cyan-theme" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+    <md-sidenav layout="column" style="overflow: hidden; display: flex;" class="md-sidenav-left md-whiteframe-z2 md-cyan-theme" md-component-id="left">
 
       <md-toolbar style="min-height: 64px; max-height:64px;" layout="column" class="md-cyan-theme">
         <h1 class="md-toolbar-tools" flex layout="column">
@@ -65,73 +65,39 @@
       </h1>
     </md-toolbar>
 
+
     <md-toolbar flex style="overflow: auto;" class="md-cyan-theme">
+      <br>
+      <br>
       <div ng-repeat="section in menu.sections">
 
-        <button class="menu-item menu-title md-menu-item" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb">
-          {{section.name}}
-        </button>
+          <img src="img/ic_people_grey600_48dp.png" height="20px">
 
-        <a class="menu-item menu-sub-item md-menu-item" ng-show="menu.isSectionSelected(section)" ng-repeat="page in section.pages" ng-href="#{{page.url}}" md-highlight="menu.isPageSelected(section, page)" md-ink-ripple="#bbb">
-          <span ng-bind="page | humanizeDoc"></span>
-        </a>
+          <button class="menu-item menu-title md-menu-item" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb">
+            {{section.name}}
+          </button>
 
+          <a class="menu-item menu-sub-item md-menu-item" ng-show="menu.isSectionSelected(section)" ng-repeat="page in section.pages" ng-href="#{{page.url}}" md-highlight="menu.isPageSelected(section, page)" md-ink-ripple="#bbb">
+            <span ng-bind="page | humanizeDoc"></span>
+          </a>
       </div>
     </md-toolbar>
 
   </md-sidenav>
 
 
-  <!--
 
-    <md-sidenav class="md-cyan-theme md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-      <md-toolbar class="md-cyan-theme">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
-
-        <div hide-md show-gt-md layout="row">
-          <div>
-            <img src="img/angular.png">
-          </div>
-          <div>
-            <p>
-              Personal
-            </p>
-          </div>
-        </div>
-        <div hide-md show-gt-md layout="row">
-          <div>
-            <img src="img/angular.png">
-          </div>
-          <div>
-            <p>
-              Public
-            </p>
-          </div>
-        </div>
-        <div hide-md show-gt-md layout="row">
-          <div>
-            <img class="face" src="img/ic_people_24px.svg" height="48px">
-          </div>
-          <div>
-            <p>
-              Family
-            </p>
-          </div>
-        </div>
-      </md-toolbar>
-    </md-sidenav> -->
-
-
-
-
-      <div layout="row">
+  <md-content layout="column" layout-align="center center" flex="50" style="margin: auto; margin-left: 35%;">
+      <div>
         <md-card>
-          <h2>Paracosm</h2>
+          <h2>{{content.headline}}</h2>
+          <h4>{{content.category}}</h4>
           <p>
               The titles of Washed Out's breakthrough song and the first single from Paracosm share the * two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
           </p>
         </md-card>
       </div>
+  </md-content>
 
 
 

@@ -30,8 +30,8 @@ html, body {
     font-size: 1.17em;
     font-weight: bold; }
 
-select, html, textarea, input {
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif; }
+button, select, html, textarea, input {
+  font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif; }
 
 body {
   margin: 0;
@@ -42,7 +42,7 @@ body {
   padding: 10px; }
 
 button {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif; }
+  font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif; }
 
 a {
   background: transparent;
@@ -5534,7 +5534,7 @@ md-toast {
 @media (min-width: 600px) {
   md-toast {
     min-width: 288px;
-    /*
+    /* 
      * When the toast doesn't take up the whole screen,
      * make it rotate when the user swipes it away
      */ }
@@ -5590,7 +5590,6 @@ md-toolbar {
   md-toolbar .md-indent {
     margin-left: 64px; }
 
-
 .md-toolbar-tools {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5609,14 +5608,13 @@ md-toolbar {
   height: 64px;
   min-height: 64px;
   max-height: 64px;
-  font-size: 26px;
+  font-size: inherit;
   font-weight: normal;
   padding: 0 10px;
-  margin: 0;
-  background-color: #00BCD4;}
+  margin: 0; }
   .md-toolbar-tools > * {
     font-size: inherit;
-    margin: 0 8px;}
+    margin: 0 8px; }
   .md-toolbar-tools h2, .md-toolbar-tools h3 {
     font-weight: normal; }
   .md-toolbar-tools a {
@@ -10516,7 +10514,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 body {
   overflow: hidden;
-  max-width: 100%;
+  max-width: 100%; 
   max-height: 100%;
   font-size: 14px;
 }
@@ -10644,8 +10642,8 @@ code:not(.highlight) {
   font-weight: bold;
 }
 .menu-item.menu-title {
-  color: #fff;
-  font-size: 20px;
+  color: #888;
+  font-size: 14px;
   padding-left: 16px;
   text-align: left;
   text-transform: uppercase;
@@ -10653,7 +10651,7 @@ code:not(.highlight) {
 }
 .menu-item.menu-title:hover,
 .menu-item.menu-title.active {
-  background-color: #0097A7;
+  color: #1976d2;
 }
 
 .menu-icon {
@@ -10745,7 +10743,7 @@ md-tabs.demo-source-tabs .active md-tab-label {
   height: 128px !important;
 }
 .small-demo .demo-toolbar,
-.small-demo .md-toolbar-tools {
+.small-demo .md-toolbar-tools { 
   min-height: 48px;
   max-height: 48px;
   font-size: 20px;
@@ -10837,7 +10835,7 @@ md-toolbar.demo-toolbar .md-button {
   min-height: 72px;
   border-bottom: 1px solid #ddd;
 }
-.api-params-label {
+.api-params-label { 
   margin-right: 8px;
   text-align: center;
   margin-top: 14px;
