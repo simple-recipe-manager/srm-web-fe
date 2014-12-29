@@ -1,9 +1,9 @@
-language: php
-script: php --version
+language: java
+script: java -version
 deploy:
 - provider: s3
-  access_key_id: $ACCESS_KEY_ID
-  secret_access_key: $SECRET_KEY
+  access_key_id: "$ACCESS_KEY_ID"
+  secret_access_key: "$SECRET_KEY"
   bucket: srm-web-fe-build-artifcat
   skip_cleanup: true
 env:
