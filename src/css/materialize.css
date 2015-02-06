@@ -7811,6 +7811,57 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		padding-top: 20px;
 	}
 	
+	.search form {
+		bottom: 20px;
+		width: 100%;
+	}
+	
+	.search input {
+		font-size: 16px;
+		font-family: inherit;
+		color: #e0e0e0;
+	}
+	
+	.search input {
+		border: 0;
+		border-radius: 3px;
+		padding: 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+		background: #fff;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.search input[type=text]:focus {
+		border: 0;
+		border-radius: 3px;
+		padding: 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+		background: #fff;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.search ::-webkit-input-placeholder {
+   		color: #e0e0e0;
+	}
+
+	.search :-moz-placeholder { /* Firefox 18- */
+   		color: #e0e0e0;  
+	}
+
+	.search ::-moz-placeholder {  /* Firefox 19+ */
+   		color: #e0e0e0;  
+	}
+
+	.search :-ms-input-placeholder {  
+   		color: #e0e0e0;  
+	}
+	
+	body {
+		background: #fafafa;
+		overflow-x: hidden;
+	}
 	
  
  
