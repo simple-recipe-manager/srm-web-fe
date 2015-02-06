@@ -1,0 +1,42 @@
+<project name="SRM-Web-FE" default="dist" basedir=".">
+    <description>
+        packages files, and replaces default dockerfile
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist"  location="dist/>
+
+  <target name="dist" description="generate the distribution" depends="git.revision">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${build}"/>
+
+    <copy file="Dockerfile.template" toFile="Dockerfile.rewrite" />
+    <replace file="Dockerfile.rewrite" token="JAR_NAME" value="${repository.version}" />
+    <move file="Dockerfile.rewrite" tofile="Dockerfile" />
+    <zip destfile="${build}/${repository.version}.zip" basedir="src" update="true" />
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <available file=".git" type="dir" property="git.present"/>
+  <target name="git.revision" description="Store git revision in ${repository.version}" if="git.present">
+      <exec executable="git" outputproperty="git.revision" failifexecutionfails="false" errorproperty="">
+          <arg value="describe"/>
+          <arg value="--tags"/>
+          <arg value="--always"/>
+          <arg value="HEAD"/>
+      </exec>
+      <condition property="repository.version" value="${git.revision}" else="unknown">
+          <and>
+              <isset property="git.revision"/>
+              <length string="${git.revision}" trim="yes" length="0" when="greater"/>
+          </and>
+      </condition>
+  </target>
+</project>
