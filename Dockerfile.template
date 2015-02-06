@@ -3,7 +3,7 @@ FROM kyma/docker-nginx
 RUN apt-get update
 RUN apt-get install -y unzip wget
 
-RUN wget -O /tmp/deploy.zip https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/build/JAR_NAME.zip
+RUN wget --no-check-certificate -O /tmp/deploy.zip https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/build/JAR_NAME.zip
 
 RUN unzip -uo /tmp/deploy.zip -d /var/www/
 
