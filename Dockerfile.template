@@ -1,6 +1,7 @@
 FROM kyma/docker-nginx
 
 # Install unzip
+RUN apt-get update
 RUN apt-get install -y unzip
 # Install curl
 RUN apt-get install -y curl
@@ -9,5 +10,4 @@ RUN curl -L https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/bu
 
 RUN unzip -uo /tmp/deploy.zip -d /var/www/
 
-ADD  /var/www
 CMD 'nginx'
