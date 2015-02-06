@@ -8,3 +8,5 @@ RUN wget --no-check-certificate -O /tmp/deploy.zip https://s3.amazonaws.com/trav
 RUN unzip -uo /tmp/deploy.zip -d /var/www/
 
 CMD 'nginx'
+
+EXPOSE 80
