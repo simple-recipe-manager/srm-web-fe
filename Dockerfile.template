@@ -2,9 +2,7 @@ FROM kyma/docker-nginx
 
 # Install unzip
 RUN apt-get update
-RUN apt-get install -y unzip
-# Install curl
-RUN apt-get install -y curl
+RUN apt-get install -y unzip curl
 
 RUN curl -L https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/build/JAR_NAME.zip -o /tmp/deploy.zip
 
