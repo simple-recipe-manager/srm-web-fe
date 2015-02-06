@@ -6,7 +6,8 @@ deploy:
   bucket: $BUCKET_NAME
   skip_cleanup: true
   upload-dir: $FOLDER
-  all_branches: true
+  on:
+    all_branches: true
 env:
   global:
   - REGION=us-east-1
