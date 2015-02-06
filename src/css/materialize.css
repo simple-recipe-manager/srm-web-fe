@@ -4778,7 +4778,7 @@ span.badge {
       margin-left: 0; }
     .row .col.s9 {
       width: 75%;
-      margin-left: 0; }
+      margin-left: 37%; }
     .row .col.s10 {
       width: 83.33333%;
       margin-left: 0; }
@@ -5331,9 +5331,9 @@ small {
   border-radius: 2px;
   background-clip: padding-box; }
   .card .card-title {
-    color: #fff;
+    color: #757575;
     font-size: 24px;
-    font-weight: 300; }
+    font-weight: 400; }
     .card .card-title.activator {
       cursor: pointer; }
   .card a {
@@ -5391,7 +5391,8 @@ small {
     box-sizing: border-box; }
     .card .card-content p {
       margin: 0;
-      color: inherit; }
+      color: #bdbdbd;
+	  font-weight: 300; }
     .card .card-content .card-title {
       line-height: 48px; }
   .card .card-action {
@@ -7804,6 +7805,10 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 	
 	ul.side-nav.fixed li.profile-badge:hover {
 		background-color: inherit;
+	}
+	
+	.card-space-div {
+		padding-top: 20px;
 	}
 	
 	
