@@ -9,7 +9,7 @@ deploy:
 env:
   global:
   - REGION=us-east-1
-  - ELB_ENV_ID=e-9wv2dgkbhv
+  - ELB_ENV_ID=$(cat envId)
   - APPLICATION_NAME="Simple Recipe Manager"
   - BUCKET_NAME=travis-build-artifacts
   - FOLDER=travis-srm-web-fe
@@ -22,5 +22,6 @@ after_deploy:
 - export AWS_SECRET_ACCESS_KEY=$SECRET_KEY
 - export AWS_DEFAULT_REGION=$REGION
 - export VERSION=$(git rev-parse --short HEAD)
-- aws elasticbeanstalk create-application-version --application-name "$APPLICATION_NAME" --version-label $VERSION --source-bundle S3Bucket=$BUCKET_NAME,S3Key=$FILE_KEY
+- export BRANCH=$(git rev-parse --abbrev-ref HEAD)
+- aws elasticbeanstalk create-application-version --application-name "$APPLICATION_NAME" --version-label "$BRANCH-$VERSION" --source-bundle S3Bucket=$BUCKET_NAME,S3Key=$FILE_KEY
 - aws elasticbeanstalk update-environment --environment-id $ELB_ENV_ID --version-label $VERSION
