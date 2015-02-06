@@ -25,7 +25,7 @@ after_deploy:
 - export AWS_DEFAULT_REGION=$REGION
 - export VERSION=$(git rev-parse --short HEAD)
 - git fetch --all
-- export BRANCH=$(git rev-parse --abbrev-ref HEAD)
+- export BRANCH=$TRAVIS_BRANCH
 - export VERSION_LABEL="$BRANCH-$VERSION"
 - aws elasticbeanstalk create-application-version --application-name "$APPLICATION_NAME" --version-label "$VERSION_LABEL" --source-bundle S3Bucket=$BUCKET_NAME,S3Key=$FILE_KEY
 - aws elasticbeanstalk update-environment --environment-id $ELB_ENV_ID --version-label $VERSION_LABEL
