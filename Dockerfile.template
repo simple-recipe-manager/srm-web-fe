@@ -1,5 +1,5 @@
 FROM kyma/docker-nginx
-
+ADD https://raw.github.com/h5bp/server-configs-nginx/master/h5bp/directive-only/cross-domain-insecure.conf /etc/nginx/h5bp/directive-only/cross-domain-insecure.conf
 RUN apt-get update
 RUN apt-get install -y unzip wget
 
