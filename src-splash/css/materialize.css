@@ -7916,10 +7916,27 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 			color: #bdbdbd;
 			text-decoration: none;  
 		}
+		
+	video#bgvid {
+		position: fixed; 
+		right: 0; 
+		bottom: 0;
+		min-width: 100%; 
+		min-height: 100%;
+		width: auto; 
+		height: auto; 
+		z-index: -100;
+		background: url(vid/poster.jpg) no-repeat;
+		background-size: cover;
+	}
 	
-	body {
-		background: #fafafa;
-		overflow-x: hidden;
+@media screen and (max-device-width: 800px) {
+	body { background: url(vid/poster.jpg) #000 no-repeat center center fixed; }
+	#bgvid { display: none; }
+}
+	
+	.splash {
+		color: #fff;
 	}
 	
 
