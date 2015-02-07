@@ -543,7 +543,7 @@ jQuery.extend( jQuery.easing,
 
       $("#lean-overlay").velocity({opacity: options.opacity}, {duration: options.in_duration, queue: false, ease: "easeOutCubic"});
 
-      $(modal).velocity({top: "10%", opacity: 1}, {
+      $(modal).velocity({top: "0%", opacity: 1}, {
         duration: options.in_duration,
         queue: false,
         ease: "easeOutCubic",
