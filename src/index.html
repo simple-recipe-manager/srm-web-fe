@@ -26,24 +26,7 @@
 	  
 	  
 	  <div class="col s-sort left-align">
-	  		<a class='dropdown-button' href='#' data-activates='sort1'><i class="small mdi-content-sort"></i></a>
-			
-			 <!-- Dropdown Structure -->
-				  <ul id='sort1' class='dropdown-content'>
-					<li><a href="#!">a <i class="mdi-action-trending-neutral"></i> z</a></li>
-					<li><a href="#!">most recent</a></li>
-				  </ul>
-				  
-				  <script>
-					  $('.dropdown-button').dropdown({
-						  inDuration: 300,
-						  outDuration: 225,
-						  constrain_width: false, // Does not change width of dropdown to that of the activator
-						  hover: false, // Activate on click
-						  alignment: 'left', // Aligns dropdown to left or right edge (works with constrain_width)
-						  gutter: 0, // Spacing from edge
-						}
-					  );</script>
+	  		<a class='dropdown-button' href='#' data-activates='dropdown1'><i class="small mdi-content-sort"></i></a>
 	  </div>
 	  	  
 	  
@@ -159,5 +142,11 @@
 		  ga('send', 'pageview');
 
 	  </script>
+	  
+	  
+	  <ul id='dropdown1' class='dropdown-content'>
+			<li><a href="#!">a <i class="mdi-action-trending-neutral"></i> z</a></li>
+			<li><a href="#!">most recent</a></li>
+	  </ul>
 	</body>
 </html>
