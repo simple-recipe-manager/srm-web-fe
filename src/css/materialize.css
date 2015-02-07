@@ -7909,8 +7909,13 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 	}
 	
 	.s-sort {
-		color: #bdbdbd; 
+		color: #bdbdbd;
+		text-decoration: none;  
 	}
+		.s-sort a {
+			color: #bdbdbd;
+			text-decoration: none;  
+		}
 	
 	body {
 		background: #fafafa;
