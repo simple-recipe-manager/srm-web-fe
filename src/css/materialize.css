@@ -7926,12 +7926,12 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		width: auto; 
 		height: auto; 
 		z-index: -100;
-		background: url(vid/poster.jpg) no-repeat;
+		background: url(/vid/poster.jpg) no-repeat;
 		background-size: cover;
 	}
 	
 @media screen and (max-device-width: 800px) {
-	body { background: url(vid/poster.jpg) #000 no-repeat center center fixed; }
+	body { background: url(/vid/poster.jpg) #000 no-repeat center center fixed; }
 	#bgvid { display: none; }
 }
 	
