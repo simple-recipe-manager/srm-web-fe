@@ -4755,8 +4755,14 @@ span.badge {
     .row .col.s1 {
       width: 8.33333%;
       margin-left: 0; }
+	.row .col.s-sort {
+      width: 3%;
+      margin-left: 0; }
+	.row .col.s-number {
+      width: 10%;
+      margin-left: 0; }
     .row .col.s2 {
-      width: 16.66667%;
+      width: 20%;
       margin-left: 0; }
     .row .col.s3 {
       width: 25%;
@@ -4778,7 +4784,10 @@ span.badge {
       margin-left: 0; }
     .row .col.s9 {
       width: 75%;
-      margin-left: 37%; }
+      margin-left: 0%; }
+	.row .col.s-card-stack {
+      width: 100%;
+      margin-left: 30%; }
     .row .col.s10 {
       width: 83.33333%;
       margin-left: 0; }
@@ -7877,6 +7886,31 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 			size: 20px;
 			content: "\e65f  ";
 		}
+		
+	.number-of-card {
+   		color: #e0e0e0;  
+		font-size: 1.75rem;
+		font-weight: 200;
+		text-align: right;
+	}
+		
+	.card-center {
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -ms-flexbox;
+		  display: -webkit-flex;
+		  display: flex;
+		  -webkit-flex-align: center;
+		  -ms-flex-align: center;
+		  -webkit-align-items: center;
+		  align-items: center;
+		  -webkit-justify-content: center;
+		  justify-content: center; 
+	}
+	
+	.s-sort {
+		color: #e0e0e0; 
+	}
 	
 	body {
 		background: #fafafa;
