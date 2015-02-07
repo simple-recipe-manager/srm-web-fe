@@ -11,16 +11,33 @@
 		</video>
 	
 				<div class="caption center-align splash">
-					<h3 class="valign">Simple Recipe Manager</h3>
-					<h5 class="light grey-text text-lighten-3">Sign up for updates and news.</h5>
+					<h3>Simple Recipe Manager</h3>
+					<h5 class="light grey-text text-lighten-3">The best way to store your recipes. Period.</h5>
+					
+					<!-- Modal Trigger -->
+  					<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign up!</a>
+
+  					<!-- Modal Structure -->
+  					<div id="modal1" class="modal">
+    					<h4>Sign up for Updates and News</h4>
+    					<p>Simple Recipe Manager is the most convinient and secure way to store your recipes, new and old. Sign up now and be the first to know when access to Simple Recipe Manager is available.</p>
+    					<div class="action-bar">
+      						<a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+    					</div>
+  					</div>
 					
 				</div>
 			  
 	
 	
 		<!--Import jQuery before materialize.js-->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			 $(document).ready(function(){
+    			$('.modal-trigger').leanModal();
+  			 });
+  		</script>
 		
 		
 		<script>
