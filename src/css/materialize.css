@@ -7845,23 +7845,47 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 	.search ::-webkit-input-placeholder {
    		color: #e0e0e0;
 	}
+		.search ::-webkit-input-placeholder::before { 
+			font-family: "Material-Design-Icons"; 
+			size: 20px;
+			content: "\e65f  ";
+		}
 
 	.search :-moz-placeholder { /* Firefox 18- */
    		color: #e0e0e0;  
 	}
+		:-moz-placeholder::before  { 
+			font-family: "Material-Design-Icons"; 
+			size: 20px;
+			content: "\e65f  ";
+		}
 
 	.search ::-moz-placeholder {  /* Firefox 19+ */
    		color: #e0e0e0;  
 	}
+		::-moz-placeholder::before  { 
+			font-family: "Material-Design-Icons";
+			size: 20px; 
+			content: "\e65f  ";
+		}
 
 	.search :-ms-input-placeholder {  
    		color: #e0e0e0;  
 	}
+		:-ms-input-placeholder::before  {
+			font-family: "Material-Design-Icons"; 
+			size: 20px;
+			content: "\e65f  ";
+		}
 	
 	body {
 		background: #fafafa;
 		overflow-x: hidden;
 	}
+	
+
+
+
 	
  
  
