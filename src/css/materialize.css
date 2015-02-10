@@ -2479,7 +2479,7 @@ span.badge {
 
 .mdi-user-profile:before {
   content: url(../img/IMG_0421web-50.jpg);}
-  
+
 .mdi-action-3d-rotation:before {
   content: "\e600"; }
 
@@ -5668,11 +5668,12 @@ ul.tabs li.tab {
   position: absolute;
   background-color: #FFFFFF;
   margin: 0px;
-  min-width: 100px;
+  min-width: 150px;
   z-index: 1000;
   max-height: 70%;
   opacity: 0;
   overflow-y: hidden;
+  overflow:hidden;
   will-change: width, height; }
   .dropdown-content li {
     cursor: pointer;
@@ -6639,7 +6640,7 @@ ul.side-nav.full, ul.side-nav.fixed {
   ul.side-nav.full a, ul.side-nav.fixed a {
     display: block;
     padding: 0 15px;
-    color: #FFF; 
+    color: #FFF;
 	font-size: 25px;}
 
 ul.side-nav.fixed {
@@ -7788,17 +7789,17 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
   .picker--time .picker__box {
     margin-bottom: 5em; }
  }
- 
- 
- 
- 
+
+
+
+
  /* ==========================================================================
    $Custom Content
    ========================================================================== */
 	.white-nav {
-    	color: #FFF; 
+    	color: #FFF;
 	}
-	
+
 	.hr-nav {
 		border: 0;
     	height: 0;
@@ -7807,30 +7808,30 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		text-align:right;
 		margin-right: 0;
 	}
-	
+
 	ul.side-nav.fixed li.profile-badge {
 		line-height: 54px;
 	}
-	
+
 	ul.side-nav.fixed li.profile-badge:hover {
 		background-color: inherit;
 	}
-	
+
 	.card-space-div {
 		padding-top: 20px;
 	}
-	
+
 	.search form {
 		bottom: 20px;
 		width: 100%;
 	}
-	
+
 	.search input {
 		font-size: 16px;
 		font-family: inherit;
 		color: #e0e0e0;
 	}
-	
+
 	.search input {
 		border: 0;
 		border-radius: 3px;
@@ -7840,7 +7841,7 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		width: 100%;
 		box-sizing: border-box;
 	}
-	
+
 	.search input[type=text]:focus {
 		border: 0;
 		border-radius: 3px;
@@ -7850,50 +7851,50 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		width: 100%;
 		box-sizing: border-box;
 	}
-	
+
 	.search ::-webkit-input-placeholder {
    		color: #e0e0e0;
 	}
-		.search ::-webkit-input-placeholder::before { 
-			font-family: "Material-Design-Icons"; 
+		.search ::-webkit-input-placeholder::before {
+			font-family: "Material-Design-Icons";
 			size: 20px;
 			content: "\e65f  ";
 		}
 
 	.search :-moz-placeholder { /* Firefox 18- */
-   		color: #e0e0e0;  
+   		color: #e0e0e0;
 	}
-		:-moz-placeholder::before  { 
-			font-family: "Material-Design-Icons"; 
+		:-moz-placeholder::before  {
+			font-family: "Material-Design-Icons";
 			size: 20px;
 			content: "\e65f  ";
 		}
 
 	.search ::-moz-placeholder {  /* Firefox 19+ */
-   		color: #e0e0e0;  
+   		color: #e0e0e0;
 	}
-		::-moz-placeholder::before  { 
+		::-moz-placeholder::before  {
 			font-family: "Material-Design-Icons";
-			size: 20px; 
-			content: "\e65f  ";
-		}
-
-	.search :-ms-input-placeholder {  
-   		color: #e0e0e0;  
-	}
-		:-ms-input-placeholder::before  {
-			font-family: "Material-Design-Icons"; 
 			size: 20px;
 			content: "\e65f  ";
 		}
-		
+
+	.search :-ms-input-placeholder {
+   		color: #e0e0e0;
+	}
+		:-ms-input-placeholder::before  {
+			font-family: "Material-Design-Icons";
+			size: 20px;
+			content: "\e65f  ";
+		}
+
 	.number-of-card {
-   		color: #bdbdbd;  
+   		color: #bdbdbd;
 		font-size: 1.75rem;
 		font-weight: 200;
 		text-align: right;
 	}
-		
+
 	.card-center {
 		  display: -webkit-box;
 		  display: -moz-box;
@@ -7905,27 +7906,19 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		  -webkit-align-items: center;
 		  align-items: center;
 		  -webkit-justify-content: center;
-		  justify-content: center; 
+		  justify-content: center;
 	}
-	
+
 	.s-sort {
 		color: #bdbdbd;
-		text-decoration: none;  
+		text-decoration: none;
 	}
 		.s-sort a {
 			color: #bdbdbd;
-			text-decoration: none;  
+			text-decoration: none;
 		}
-	
+
 	body {
 		background: #fafafa;
 		overflow-x: hidden;
 	}
-	
-
-
-
-	
- 
- 
- 
