@@ -7912,10 +7912,12 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 	.s-sort {
 		color: #bdbdbd;
 		text-decoration: none;
+    height: inherit;
 	}
 		.s-sort a {
 			color: #bdbdbd;
 			text-decoration: none;
+      height: inherit;
 		}
 
 	body {
