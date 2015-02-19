@@ -7919,6 +7919,11 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 
 	video#bgvid {
     height: 100%;
+    background: url(../vid/poster.jpg) no-repeat;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 		position: fixed;
 		right: 0;
 		bottom: 0;
@@ -7927,11 +7932,6 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		width: auto;
 		height: auto;
 		z-index: -100;
-		background: url(../vid/poster.jpg) no-repeat;
-    -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
 	}
 
 @media screen and (max-device-width: 800px) {
