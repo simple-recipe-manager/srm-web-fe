@@ -7928,7 +7928,10 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		height: auto;
 		z-index: -100;
 		background: url(../vid/poster.jpg) no-repeat;
-		background-size: cover;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 	}
 
 @media screen and (max-device-width: 800px) {
