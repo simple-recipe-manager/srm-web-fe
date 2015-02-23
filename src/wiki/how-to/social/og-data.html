@@ -44,7 +44,7 @@
 				</header>
 				<div class="container">
 					<section>
-						<p>Open Graph data is a set of meta tags nested in the <code><head></code> tag of a HTML page. This data is used by social networks to generate the site specific social cards.</p>
+						<p>Open Graph data is a set of meta tags nested in the <code>&lt;head&gt;</code> tag of a HTML page. This data is used by social networks to generate the site specific social cards.</p>
 
 						<p>This data helps your posts gain more reach by extending the amount of context the viewer has about the link. OG data allows for the inclusion of a title, description, images, links to social accounts, and redirects to apps in both the AppStore and Google Play.</p>
 
@@ -54,38 +54,41 @@
 
 						<p>Here are the tags we include on every page:</p>
 
-						<blockqoute>
 
+						<blockqoute>
 							<p><strong>For use with Google+</strong></p>
 								<code>
-								<!-- Schema.org markup for Google+ -->
-									<meta itemprop="name" content="Whisk.ly Recipe Manager">
-									<meta itemprop="description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old.">
-									<meta itemprop="image" content="http://whisk.ly/img/whiskly_og_twitter.png">
+									&lt;!-- Schema.org markup for Google+ --&gt;</code><br>
+									<code>&lt;meta itemprop="name" content="Whisk.ly Recipe Manager"&gt;</code><br>
+									<code>&lt;meta itemprop="description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old."&gt;</code><br>
+									<code>&lt;meta itemprop="image" content="http://whisk.ly/img/whiskly_og_twitter.png"&gt;
 								</code>
+								<p></p>
 
 								<p><strong>For use with Twitter</strong></p>
 								<code>
-								<!-- Twitter Card data -->
-									<meta name="twitter:card" content="summary_large_image">
-									<meta name="twitter:site" content="@whisklyapp">
-									<meta name="twitter:creator" content="@geohinch">
-									<meta name="twitter:title" content="Whisk.ly">
-									<meta name="twitter:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old.">
-									<!-- Twitter summary card with large image must be at least 280x150px -->
-									<meta name="twitter:image:src" content="http://whisk.ly/img/whiskly_og_twitter.png">
+									&lt;!-- Twitter Card data --&gt;</code><br>
+									<code>&lt;meta name="twitter:card" content="summary_large_image"&gt;</code><br>
+									<code>&lt;meta name="twitter:site" content="@whisklyapp"&gt;</code><br>
+									<code>&lt;meta name="twitter:creator" content="@geohinch"&gt;</code><br>
+									<code>&lt;meta name="twitter:title" content="Whisk.ly"&gt;</code><br>
+									<code>&lt;meta name="twitter:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old."&gt;</code><br>
+									<code>&lt;!-- Twitter summary card with large image must be at least 280x150px --&gt;</code><br>
+									<code>&lt;meta name="twitter:image:src" content="http://whisk.ly/img/whiskly_og_twitter.png"&gt;
 								</code>
+								<p></p>
 
 								<p><strong>For Facebook, Pinterest, etc.</strong></p>
 								<code>
-								<!-- Open Graph data -->
-									<meta property="og:title" content="Whisk.ly Recipe Manager" />
-									<meta property="og:type" content="product" />
-									<meta property="og:url" content="http://whisk.ly/" />
-									<meta property="og:image" content="http://whisk.ly/img/whiskly_og_facebook.png" />
-									<meta property="og:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old." />
-									<meta property="og:site_name" content="Whisk.ly" />
+									&lt;!-- Open Graph data --&gt;</code><br>
+									<code>&lt;meta property="og:title" content="Whisk.ly Recipe Manager" /&gt;</code><br>
+									<code>&lt;meta property="og:type" content="product" /&gt;</code><br>
+									<code>&lt;meta property="og:url" content="http://whisk.ly/" /&gt;</code><br>
+									<code>&lt;meta property="og:image" content="http://whisk.ly/img/whiskly_og_facebook.png" /&gt;</code><br>
+									<code>&lt;meta property="og:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old." /&gt;</code><br>
+									<code>&lt;meta property="og:site_name" content="Whisk.ly" /&gt;
 								</code>
+								<p></p>
 						</blockqoute>
 
 						<p>Once the app is in Apple’s AppStore and Google Play, add the OG app data below to every page.</p>
@@ -94,37 +97,56 @@
 
 						<h2>Validating Data</h2>
 
-						<img src=""/>
+						<a href="https://iframely.com/try" class="image fit"><img src="images/social_og_iframely.png" alt="" /></a>
 
-						<p>Use the generic validator iframely to verify all of the OG data populates.</p>
+						<p>Use the generic validator <a href="https://iframely.com/try">iframely</a> to verify all of the OG data populates.</p>
 
-						<img src=""/>
 
 						<p>If the data populates correctly, use the platform specific validators.</p>
 
+						<div class="row">
+							<div class="6u">
+								<section class="special">
+									<a href="https://cards-dev.twitter.com/validator" class="image fit"><img src="images/social_og_twitter.png" alt="" /></a>
+									<h3>Twitter Validator</h3>
+									<ul class="actions">
+										<li><a href="https://cards-dev.twitter.com/validator" class="button alt">Validator</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.facebook.com/tools/debug/" class="image fit"><img src="images/social_og_facebook.png" alt="" /></a>
+									<h3>Facebook Debugger</h3>
+									<ul class="actions">
+										<li><a href="https://developers.facebook.com/tools/debug/" class="button alt">Debugger</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.google.com/+/web/snippet/" class="image fit"><img src="images/social_og_plus.png" alt="" /></a>
+									<h3>Google+ Snippet</h3>
+									<ul class="actions">
+										<li><a href="https://developers.google.com/+/web/snippet/" class="button alt">Snippet</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.pinterest.com/rich_pins/validator/" class="image fit"><img src="images/social_og_pintrest.png" alt="" /></a>
+									<h3>Pintrest Rich Pin</h3>
+									<ul class="actions">
+										<li><a href="https://developers.pinterest.com/rich_pins/validator/" class="button alt">Rich Pin</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+
 					</section>
-					<hr class="major" />
-					<div class="row">
-						<div class="6u">
-							<section class="special">
-								<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-								<h3>Mollis adipiscing nisl</h3>
-								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
-								<ul class="actions">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="6u">
-							<section class="special">
-								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>Neque ornare adipiscing</h3>
-								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
-								<ul class="actions">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-						</div>
 					</div>
 				</div>
 			</section>
