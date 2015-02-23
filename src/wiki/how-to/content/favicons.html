@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Ion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Whisk.ly Wiki - OG (Social Cards) Validation</title>
+
+		<base href="http://whisk.ly/wiki/" />
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link href="css/style.css" rel="stylesheet" type="text/css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<a href="#"><img src="images/whiskly_web_header.svg" height="90%"></a>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="how-to/how-to.html">How To</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>OG (Social Cards) Validation</h2>
+				</header>
+				<div class="container">
+					<section>
+						<p>Open Graph data is a set of meta tags nested in the <code>&lt;head&gt;</code> tag of a HTML page. This data is used by social networks to generate the site specific social cards.</p>
+
+						<p>This data helps your posts gain more reach by extending the amount of context the viewer has about the link. OG data allows for the inclusion of a title, description, images, links to social accounts, and redirects to apps in both the AppStore and Google Play.</p>
+
+
+
+						<h2>Tags to Include</h2>
+
+						<p>Here are the tags we include on every page:</p>
+
+
+						<blockqoute>
+							<p><strong>For use with Google+</strong></p>
+								<code>
+									<!-- Favicon package -->
+									<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+									<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+									<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+									<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+									<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+									<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+									<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+									<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+									<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+									<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+									<link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
+									<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+									<link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+									<link rel="manifest" href="favicon/manifest.json">
+									<link rel="shortcut icon" href="favicon/favicon.ico">
+									<meta name="msapplication-TileColor" content="#f4f5f5">
+									<meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+									<meta name="msapplication-config" content="favicon/browserconfig.xml">
+									<meta name="theme-color" content="#0097a7">
+								</code>
+
+								https://github.com/audreyr/favicon-cheat-sheet
+								<p></p>
+
+								<p><strong>For use with Twitter</strong></p>
+								<code>
+									&lt;!-- Twitter Card data --&gt;</code><br>
+									<code>&lt;meta name="twitter:card" content="summary_large_image"&gt;</code><br>
+									<code>&lt;meta name="twitter:site" content="@whisklyapp"&gt;</code><br>
+									<code>&lt;meta name="twitter:creator" content="@geohinch"&gt;</code><br>
+									<code>&lt;meta name="twitter:title" content="Whisk.ly"&gt;</code><br>
+									<code>&lt;meta name="twitter:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old."&gt;</code><br>
+									<code>&lt;!-- Twitter summary card with large image must be at least 280x150px --&gt;</code><br>
+									<code>&lt;meta name="twitter:image:src" content="http://whisk.ly/img/whiskly_og_twitter.png"&gt;
+								</code>
+								<p></p>
+
+								<p><strong>For Facebook, Pinterest, etc.</strong></p>
+								<code>
+									&lt;!-- Open Graph data --&gt;</code><br>
+									<code>&lt;meta property="og:title" content="Whisk.ly Recipe Manager" /&gt;</code><br>
+									<code>&lt;meta property="og:type" content="product" /&gt;</code><br>
+									<code>&lt;meta property="og:url" content="http://whisk.ly/" /&gt;</code><br>
+									<code>&lt;meta property="og:image" content="http://whisk.ly/img/whiskly_og_facebook.png" /&gt;</code><br>
+									<code>&lt;meta property="og:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old." /&gt;</code><br>
+									<code>&lt;meta property="og:site_name" content="Whisk.ly" /&gt;
+								</code>
+								<p></p>
+						</blockqoute>
+
+						<p>Once the app is in Apple’s AppStore and Google Play, add the OG app data below to every page.</p>
+
+
+
+						<h2>Validating Data</h2>
+
+						<a href="https://iframely.com/try" class="image fit"><img src="images/social_og_iframely.png" alt="" /></a>
+
+						<p>Use the generic validator <a href="https://iframely.com/try">iframely</a> to verify all of the OG data populates.</p>
+
+
+						<p>If the data populates correctly, use the platform specific validators.</p>
+
+						<div class="row">
+							<div class="6u">
+								<section class="special">
+									<a href="https://cards-dev.twitter.com/validator" class="image fit"><img src="images/social_og_twitter.png" alt="" /></a>
+									<h3>Twitter Validator</h3>
+									<ul class="actions">
+										<li><a href="https://cards-dev.twitter.com/validator" class="button alt">Validator</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.facebook.com/tools/debug/" class="image fit"><img src="images/social_og_facebook.png" alt="" /></a>
+									<h3>Facebook Debugger</h3>
+									<ul class="actions">
+										<li><a href="https://developers.facebook.com/tools/debug/" class="button alt">Debugger</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.google.com/+/web/snippet/" class="image fit"><img src="images/social_og_plus.png" alt="" /></a>
+									<h3>Google+ Snippet</h3>
+									<ul class="actions">
+										<li><a href="https://developers.google.com/+/web/snippet/" class="button alt">Snippet</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="6u">
+								<section class="special">
+									<a href="https://developers.pinterest.com/rich_pins/validator/" class="image fit"><img src="images/social_og_pintrest.png" alt="" /></a>
+									<h3>Pintrest Rich Pin</h3>
+									<ul class="actions">
+										<li><a href="https://developers.pinterest.com/rich_pins/validator/" class="button alt">Rich Pin</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+
+					</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; <a href="http://whisk.ly">Whisk.ly</a> - All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
