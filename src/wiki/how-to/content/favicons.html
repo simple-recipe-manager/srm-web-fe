@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Whisk.ly Wiki - OG (Social Cards) Validation</title>
+		<title>Whisk.ly Wiki - Favicons</title>
 
 		<base href="http://whisk.ly/wiki/" />
 
@@ -40,129 +40,60 @@
 		<!-- Main -->
 			<section id="main" class="wrapper style1">
 				<header class="major">
-					<h2>OG (Social Cards) Validation</h2>
+					<h1>Favicons</h1>
 				</header>
 				<div class="container">
 					<section>
-						<p>Open Graph data is a set of meta tags nested in the <code>&lt;head&gt;</code> tag of a HTML page. This data is used by social networks to generate the site specific social cards.</p>
+						<p>The favicon package code, located in the <code>&lt;head&gt;</code> tag of a HTML page, instructs different browsers and OSs where which icons to display in different uses.</p>
 
-						<p>This data helps your posts gain more reach by extending the amount of context the viewer has about the link. OG data allows for the inclusion of a title, description, images, links to social accounts, and redirects to apps in both the AppStore and Google Play.</p>
+						<p>Below is a comprehensive list of all the favicon sizes we will use to ensure Whisk.ly is presented correctly on all devices:</p>
 
+						<h2>The favicon package</h2>
 
+									<p>Favicons for iOS and Mac OS Safari browsers:</p>
+									<p><code>&lt;link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png"&gt;</code><br>
+									<code>&lt;link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png"&gt;</code></p>
 
-						<h2>Tags to Include</h2>
+									<p>Other browsers:</p>
+									<p><code>&lt;link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32"&gt;</code><br>
+									<code>&lt;link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192"&gt;</code><br>
+									<code>&lt;link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"&gt;</code><br>
+									<code>&lt;link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16"&gt;</code></p>
 
-						<p>Here are the tags we include on every page:</p>
+									<p>iOS icon manifest:</p>
+									<p><code>&lt;link rel="manifest" href="favicon/manifest.json"&gt;</code></p>
 
+									<p>.ico for most browesers (certain versions of Chrome excluded):</p>
+									<p><code>&lt;link rel="shortcut icon" href="favicon/favicon.ico"&gt;</code></p>
 
-						<blockqoute>
-							<p><strong>For use with Google+</strong></p>
-								<code>
-									<!-- Favicon package -->
-									<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
-									<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
-									<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
-									<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
-									<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
-									<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
-									<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
-									<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
-									<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
-									<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
-									<link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
-									<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
-									<link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
-									<link rel="manifest" href="favicon/manifest.json">
-									<link rel="shortcut icon" href="favicon/favicon.ico">
-									<meta name="msapplication-TileColor" content="#f4f5f5">
-									<meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
-									<meta name="msapplication-config" content="favicon/browserconfig.xml">
-									<meta name="theme-color" content="#0097a7">
-								</code>
+									<p>Windows 8 &amp; 8.1 tile:</p>
+									<p><code>&lt;meta name="msapplication-TileColor" content="#f4f5f5"&gt;</code><br>
+									<code>&lt;meta name="msapplication-TileImage" content="favicon/mstile-144x144.png"&gt;</code></p>
 
-								https://github.com/audreyr/favicon-cheat-sheet
-								<p></p>
-
-								<p><strong>For use with Twitter</strong></p>
-								<code>
-									&lt;!-- Twitter Card data --&gt;</code><br>
-									<code>&lt;meta name="twitter:card" content="summary_large_image"&gt;</code><br>
-									<code>&lt;meta name="twitter:site" content="@whisklyapp"&gt;</code><br>
-									<code>&lt;meta name="twitter:creator" content="@geohinch"&gt;</code><br>
-									<code>&lt;meta name="twitter:title" content="Whisk.ly"&gt;</code><br>
-									<code>&lt;meta name="twitter:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old."&gt;</code><br>
-									<code>&lt;!-- Twitter summary card with large image must be at least 280x150px --&gt;</code><br>
-									<code>&lt;meta name="twitter:image:src" content="http://whisk.ly/img/whiskly_og_twitter.png"&gt;
-								</code>
-								<p></p>
-
-								<p><strong>For Facebook, Pinterest, etc.</strong></p>
-								<code>
-									&lt;!-- Open Graph data --&gt;</code><br>
-									<code>&lt;meta property="og:title" content="Whisk.ly Recipe Manager" /&gt;</code><br>
-									<code>&lt;meta property="og:type" content="product" /&gt;</code><br>
-									<code>&lt;meta property="og:url" content="http://whisk.ly/" /&gt;</code><br>
-									<code>&lt;meta property="og:image" content="http://whisk.ly/img/whiskly_og_facebook.png" /&gt;</code><br>
-									<code>&lt;meta property="og:description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old." /&gt;</code><br>
-									<code>&lt;meta property="og:site_name" content="Whisk.ly" /&gt;
-								</code>
-								<p></p>
-						</blockqoute>
-
-						<p>Once the app is in Apple’s AppStore and Google Play, add the OG app data below to every page.</p>
+									<p>Android Chrome browser settings:</p>
+									<p><code>&lt;meta name="msapplication-config" content="favicon/browserconfig.xml"&gt;</code><br>
+									<code>&lt;meta name="theme-color" content="#0097a7"&gt;</code></p>
 
 
+						<h2>Verifying favicons</h2>
 
-						<h2>Validating Data</h2>
+						<p>It is important to verify that the favicons are correctly refenced on each individual page.</p>
 
-						<a href="https://iframely.com/try" class="image fit"><img src="images/social_og_iframely.png" alt="" /></a>
-
-						<p>Use the generic validator <a href="https://iframely.com/try">iframely</a> to verify all of the OG data populates.</p>
+						<p>Use a service like RealFaviconGenerator's <a href="http://realfavicongenerator.net/favicon_checker">Favicon Checker</a> to validate. Be sure to click the "favicons are not in root" option to reduce the number of false errors.</p>
 
 
-						<p>If the data populates correctly, use the platform specific validators.</p>
+						<h2>Interested in learning more?</h2>
 
-						<div class="row">
-							<div class="6u">
-								<section class="special">
-									<a href="https://cards-dev.twitter.com/validator" class="image fit"><img src="images/social_og_twitter.png" alt="" /></a>
-									<h3>Twitter Validator</h3>
-									<ul class="actions">
-										<li><a href="https://cards-dev.twitter.com/validator" class="button alt">Validator</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="6u">
-								<section class="special">
-									<a href="https://developers.facebook.com/tools/debug/" class="image fit"><img src="images/social_og_facebook.png" alt="" /></a>
-									<h3>Facebook Debugger</h3>
-									<ul class="actions">
-										<li><a href="https://developers.facebook.com/tools/debug/" class="button alt">Debugger</a></li>
-									</ul>
-								</section>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="6u">
-								<section class="special">
-									<a href="https://developers.google.com/+/web/snippet/" class="image fit"><img src="images/social_og_plus.png" alt="" /></a>
-									<h3>Google+ Snippet</h3>
-									<ul class="actions">
-										<li><a href="https://developers.google.com/+/web/snippet/" class="button alt">Snippet</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="6u">
-								<section class="special">
-									<a href="https://developers.pinterest.com/rich_pins/validator/" class="image fit"><img src="images/social_og_pintrest.png" alt="" /></a>
-									<h3>Pintrest Rich Pin</h3>
-									<ul class="actions">
-										<li><a href="https://developers.pinterest.com/rich_pins/validator/" class="button alt">Rich Pin</a></li>
-									</ul>
-								</section>
-							</div>
-						</div>
+							<p>
+								Check out the <a href="https://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</a> created by <a href="https://github.com/audreyr/">Audrey Roy</a> on GitHub for "a painfully obsessive cheat sheet to favicon sizes/types."
+							</p>
 
 					</section>
 					</div>
