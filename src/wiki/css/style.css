@@ -120,7 +120,11 @@
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
-		padding-left: 2em;
+		margin-left: 3em;
+	}
+
+	code .inline-code {
+		margin-left: 0em;
 	}
 
 	pre {
