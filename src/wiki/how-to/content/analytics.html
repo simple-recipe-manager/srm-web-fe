@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Ion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Whisk.ly Wiki - Web Analytics</title>
+
+		<base href="http://whisk.ly/wiki/" />
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link href="css/style.css" rel="stylesheet" type="text/css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<a href="#"><img src="images/whiskly_web_header.svg" height="90%"></a>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="how-to/how-to.html">How To</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>Web Analytics</h2>
+				</header>
+				<div class="container">
+					<section>
+						<h2>Google Analytics</h2>
+						<p>Google Analytics is the primary analytics provider for Whisk.ly. All web anayltics should run through the Analytics report buider accessible from the Google Analytics account.</p>
+
+						<p>Here are the tags we include at the bottom of every page:</p>
+
+									<p>
+
+									<code>&lt;script</code><br>
+									<code>$(document).ready(function(){</code><br>
+										<code>$('.modal-trigger').leanModal();</code><br>
+										<code>});</code><br>
+										<code>&lt;/script&gt;</code><br>
+
+										<p></p>
+
+										<code>&lt;script&gt;</code><br>
+										<code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+										(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+										m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+										})(window,document,'script','//www.google-analytics.com/analytics.js','ga');</code><br>
+
+										<p></p>
+
+										<code>ga('create', 'UA-59476825-4', 'auto');</code><br>
+										<code>ga('send', 'pageview');</code><br>
+
+										<code>&lt;script&gt;</code>
+
+								</p>
+
+
+
+						<h2>Amazon Cognito</h2>
+
+						<p>Amazon Cognito will serve as a backup analytics provider. Cognito can be accessed through the Whisk.ly <a href="">AWS Console</a> under the services section.</p>
+
+						<p>Here are the tags we include at the bottom of every page:</p>
+
+
+
+					</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; <a href="http://whisk.ly">Whisk.ly</a> - All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
