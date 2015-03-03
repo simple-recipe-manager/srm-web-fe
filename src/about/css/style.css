@@ -989,6 +989,14 @@
 			border-radius: 50%;
 			background-clip: padding-box; }
 
+		.who-we-are {
+			text-align: center;
+		}
+
+		.prof {
+			width: 75%;
+		}
+
 /* Banner */
 
 	#banner {
