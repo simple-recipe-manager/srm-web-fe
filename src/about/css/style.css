@@ -983,6 +983,12 @@
 			padding-bottom: 5em;
 		}
 
+		.circle {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			background-clip: padding-box; }
+
 /* Banner */
 
 	#banner {
