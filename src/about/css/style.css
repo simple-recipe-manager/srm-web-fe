@@ -980,7 +980,22 @@
 			}
 
 		.about-head {
+			width: 25%;
 			padding-bottom: 5em;
+		}
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.about-head {
+				width: 50%;
+				padding-bottom: 5em;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.about-head {
+				width: 75%;
+				padding-bottom: 5em;
+			}
 		}
 
 		.circle {
