@@ -1012,6 +1012,15 @@
 			width: 75%;
 		}
 
+		.prof-modal {
+			text-align: center;
+			margin: center;
+		}
+
+		.prof-modal img {
+			width: 25%;
+		}
+
 /* Banner */
 
 	#banner {
