@@ -10,6 +10,10 @@
 		font-size: 12pt;
 	}
 
+	.container {
+		width: 1000px;
+	}
+
 /* Banner */
 
 	#banner {

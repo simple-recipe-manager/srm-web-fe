@@ -984,6 +984,10 @@
 			padding-bottom: 5em;
 		}
 
+		.container {
+			width: 1000px;
+		}
+
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.about-head {
 				width: 50%;
