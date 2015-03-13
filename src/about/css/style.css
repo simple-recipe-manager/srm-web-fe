@@ -105,11 +105,42 @@
 			margin: 2em 0 5em 0;
 		}
 
-	blockquote {
+		hr.prof-divide {
+			width: 50%;
+			margin: auto;
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
+	/*blockquote {
 		border-left: solid 4px rgba(144, 144, 144, 0.25);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
+	} */
+
+	blockquote {
+		font-size: 2em;
+		font-style: italic;
+		font-weight: 300;
+		margin: 0.25em 0;
+		padding: 0.25em 40px;
+		line-height: 1.45;
+		position: relative;
+		color: #383838;
+		text-align: left;
+		margin: auto;
+	}
+
+	blockquote:before {
+		font-family: Georgia, serif;
+		display: block;
+		content: "\201C";
+		font-size: 80px;
+		position: absolute;
+		left: -20px;
+		top: -20px;
+		color: #7a7a7a;
 	}
 
 	code {
@@ -988,10 +1019,22 @@
 			width: 1000px;
 		}
 
+		.modal {
+			width: 50%;
+			margin: auto;
+			text-align: center;
+		}
+
 		@media (min-width: 769px) and (max-width: 1024px) {
 			.about-head {
 				width: 50%;
 				padding-bottom: 5em;
+			}
+
+			.modal {
+				width: 75%;
+				margin: auto;
+				text-align: center;
 			}
 		}
 
@@ -999,6 +1042,12 @@
 			.about-head {
 				width: 75%;
 				padding-bottom: 5em;
+			}
+
+			.modal {
+				width: 100%;
+				margin: auto;
+				text-align: center;
 			}
 		}
 
@@ -1024,6 +1073,14 @@
 		.prof-modal img {
 			width: 50%;
 		}
+
+		.prof-content {
+			text-align: left;
+		}
+
+			.prof-content-buton {
+				text-align: center;
+			}
 
 /* Banner */
 
