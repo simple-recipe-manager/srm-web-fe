@@ -113,9 +113,9 @@
 		beforeOpen:   $.noop,                 /* Called before open. can return false to prevent opening of lightbox. Gets event as parameter, this contains all data */
 		beforeContent: $.noop,                /* Called when content is loaded. Gets event as parameter, this contains all data */
 		beforeClose:  $.noop,                 /* Called before close. can return false to prevent opening of lightbox. Gets event as parameter, this contains all data */
-		afterOpen:    $.noop,                 /* Called after open. Gets event as parameter, this contains all data */
+		afterOpen:    function openScroll(){document.body.style.overflow='hidden';},                 /* Called after open. Gets event as parameter, this contains all data */
 		afterContent: $.noop,                 /* Called after content is ready and has been set. Gets event as parameter, this contains all data */
-		afterClose:   $.noop,                 /* Called after close. Gets event as parameter, this contains all data */
+		afterClose:   function closeScroll(){document.body.style.overflow='scroll';},                 /* Called after close. Gets event as parameter, this contains all data */
 		onKeyUp:      $.noop,                 /* Called on key down for the frontmost featherlight */
 		onResize:     $.noop,                 /* Called after new content and when a window is resized */
 		type:         null,                   /* Specify type of lightbox. If unset, it will check for the targetAttrs value. */
