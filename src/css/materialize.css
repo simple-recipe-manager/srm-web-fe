@@ -8037,3 +8037,9 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		margin: 2%;
 	}
 }
+
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
