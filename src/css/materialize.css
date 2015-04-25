@@ -8024,3 +8024,16 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		margin: 2%;
 	}
 }
+
+
+@media only screen and (max-width : 640px) {
+	.whiskly-logo {
+		width: 80%;
+		margin: -2%;
+	}
+
+  .whiskly-logo-color {
+		width: 80%;
+		margin: 2%;
+	}
+}
