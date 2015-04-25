@@ -8036,6 +8036,10 @@ ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.
 		width: 80%;
 		margin: 2%;
 	}
+
+  .row .col.s6 {
+    width: 100%;
+  }
 }
 
 
