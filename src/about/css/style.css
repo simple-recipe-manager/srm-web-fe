@@ -913,10 +913,6 @@
 
 /* Header */
 
-	#skel-layers-wrapper {
-		padding-top: 3em;
-	}
-
 	#header {
 		background: #fff;
 		color: #555f66;
@@ -1082,22 +1078,124 @@
 				text-align: center;
 			}
 
+		.btn {
+			 display: inline-block;
+			 height: 54px;
+			 margin-bottom: 15px;
+			 padding: 0 2rem;
+			 -webkit-border-radius: 2px;
+			 -moz-border-radius: 2px;
+			 border-radius: 2px;
+			 background-clip: padding-box;
+			 line-height: 56px;
+			 text-transform: uppercase;
+			 border: none;
+			 outline: 0;
+			 -webkit-tap-highlight-color: transparent;
+			}
+
+			.btn i {
+			  font-size: 1.3rem;
+			  line-height: inherit;
+			}
+
+			.btn {
+			  text-decoration: none;
+			  color: #FFF;
+			  background-color: #26a69a;
+			  text-align: center;
+			  letter-spacing: 0.5px;
+			  -webkit-transition: 0.2s ease-out;
+			  -moz-transition: 0.2s ease-out;
+			  -o-transition: 0.2s ease-out;
+			  -ms-transition: 0.2s ease-out;
+			  transition: 0.2s ease-out;
+			  cursor: pointer; }
+			  .btn:hover {
+			    background-color: #2bbbad;
+				}
+
+@media only screen and (max-width : 640px) {
+			.btn {
+				height: 36px;
+				line-height: 36px;
+				width: 100%;
+			}
+			  .btn i {
+			    font-size: 1.6rem; }
+		}
+
+			/*!
+			 * Waves v0.6.0
+			 * http://fian.my.id/Waves
+			 *
+			 * Copyright 2014 Alfiana E. Sibuea and other contributors
+			 * Released under the MIT license
+			 * https://github.com/fians/Waves/blob/master/LICENSE
+			 */
+			.waves-effect {
+			  position: relative;
+			  cursor: pointer;
+			  display: inline-block;
+			  overflow: hidden;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			  -webkit-tap-highlight-color: transparent;
+			  z-index: 1;
+			  will-change: opacity, transform;
+			  -webkit-transition: all 0.3s ease-out;
+			  -moz-transition: all 0.3s ease-out;
+			  -o-transition: all 0.3s ease-out;
+			  -ms-transition: all 0.3s ease-out;
+			  transition: all 0.3s ease-out; }
+			  .waves-effect .waves-ripple {
+			    position: absolute;
+			    border-radius: 50%;
+			    width: 20px;
+			    height: 20px;
+			    margin-top: -10px;
+			    margin-left: -10px;
+			    opacity: 0;
+			    background: rgba(0, 0, 0, 0.2);
+			    -webkit-transition: all 0.7s ease-out;
+			    -moz-transition: all 0.7s ease-out;
+			    -o-transition: all 0.7s ease-out;
+			    -ms-transition: all 0.7s ease-out;
+			    transition: all 0.7s ease-out;
+			    -webkit-transition-property: -webkit-transform, opacity;
+			    -moz-transition-property: -moz-transform, opacity;
+			    -o-transition-property: -o-transform, opacity;
+			    transition-property: transform, opacity;
+			    -webkit-transform: scale(0);
+			    -moz-transform: scale(0);
+			    -ms-transform: scale(0);
+			    -o-transform: scale(0);
+			    transform: scale(0);
+			    pointer-events: none; }
+			  .waves-effect.waves-teal .waves-ripple {
+			    background-color: rgba(0, 150, 136, 0.7); }
+
+
+			/* Firefox Bug: link not triggered */
+			a.waves-effect .waves-ripple {
+			  z-index: -1; }
+
+
 /* Banner */
 
 	#banner {
 		background-color: #666666;
-		background-image: url("../images/banner.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		color: #d8d8d8;
-		padding: 14em 0;
 		text-align: center;
 		position: relative;
 	}
 
 		#banner:before {
-			content: '';
 			position: absolute;
 			left: 0;
 			top: 0;
