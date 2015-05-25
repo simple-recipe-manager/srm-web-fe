@@ -7,6 +7,11 @@ import javax.ws.rs.core.MediaType;
 
 import ly.whisk.views.IndexView;
 
+import com.amazonaws.auth.AnonymousAWSCredentials;
+import com.amazonaws.services.cognitoidentity.AmazonCognitoIdentity;
+import com.amazonaws.services.cognitoidentity.AmazonCognitoIdentityClient;
+import com.amazonaws.services.cognitoidentity.model.GetIdRequest;
+import com.amazonaws.services.cognitoidentity.model.GetIdResult;
 import com.codahale.metrics.annotation.Timed;
 
 @Path("/")
@@ -20,7 +25,10 @@ public class IndexResource {
 	@Produces(MediaType.TEXT_HTML)
 	@Timed
 	public IndexView getRoot() {
+		
+
 		return new IndexView();
+
 	}
 
 }

@@ -31,15 +31,38 @@
 
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+      <script src="assets/js/jquery-2.1.1.min.js"></script>
     </head>
 
     <body>
+<div id="amazon-root"></div>
+<script type="text/javascript">
+
+  window.onAmazonLoginReady = function() {
+    amazon.Login.setClientId('amzn1.application-oa2-client.4aa9777d9d07427aa4509cd182b30c76');
+  };
+  (function(d) {
+    var a = d.createElement('script'); a.type = 'text/javascript';
+    a.async = true; a.id = 'amazon-login-sdk';
+    a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+    d.getElementById('amazon-root').appendChild(a);
+  })(document);
+$(function() {
+    options = { scope : 'profile' };
+    window.amazon.Login.authorize(options, 'https://devo.whisk.ly/authorize');
+});
+</script>
 
 	<div class="row">
 
       <div class="col s2">
 
 		<ul id="slide-out" class="side-nav fixed cyan lighten-3 side-nav-white">
+			<li><a href="#" id="LoginWithAmazon">
+  <img border="0" alt="Login with Amazon"
+    src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+    width="156" height="32" />
+</a></li>
 			<li class="profile-badge"><a href="#profile" class="circle"><i class="left"><img src="assets/img/IMG_0421web-50.jpg" class="circle"></i>George H</a></li>
 			<hr class="hr-nav">
 			<li><a href="#!"><i class="mdi-action-lock left"></i>Private</a></li>

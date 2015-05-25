@@ -6,6 +6,7 @@ import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import ly.whisk.configuration.SrmWebConfiguration;
 import ly.whisk.health.ConnectionHealthCheck;
+import ly.whisk.resources.AuthorizeResource;
 import ly.whisk.resources.HealthCheckResource;
 import ly.whisk.resources.IndexResource;
 
@@ -36,6 +37,9 @@ public class SrmWebApplication extends Application<SrmWebConfiguration> {
 
 		final IndexResource index = new IndexResource();
 		environment.jersey().register(index);
+		
+		final AuthorizeResource auth = new AuthorizeResource();
+		environment.jersey().register(auth);
 
 	}
 
