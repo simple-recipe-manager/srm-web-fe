@@ -1,0 +1,7 @@
+server:
+  rootPath: '/*'
+assets:
+  overrides:
+     /: assets/
+  mimeTypes:
+     json: application/json

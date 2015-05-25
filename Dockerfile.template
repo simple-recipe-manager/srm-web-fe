@@ -1,12 +1,10 @@
-FROM kyma/docker-nginx
+FROM java:openjdk-8-jre
 
-RUN apt-get update
-RUN apt-get install -y unzip wget
+RUN mkdir /app
+ADD https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/target/JAR_NAME.jar /app/server.jar
+ADD https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/YAML_NAME /app/server.yaml
+ADD https://raw.github.com/h5bp/server-configs-nginx/master/h5bp/directive-only/cross-domain-insecure.conf /etc/nginx/h5bp/directive-only/cross-domain-insecure.conf
+CMD ["java", "-jar", "/app/server.jar", "server", "/app/server.yaml" ]
 
-RUN wget --no-check-certificate -O /tmp/deploy.zip https://s3.amazonaws.com/travis-build-artifacts/travis-srm-web-fe/build/JAR_NAME.zip
 
-RUN unzip -uo /tmp/deploy.zip -d /var/www/
-
-CMD 'nginx'
-
-EXPOSE 80
+EXPOSE 8080
