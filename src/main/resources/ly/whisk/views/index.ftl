@@ -30,7 +30,7 @@
 
 
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
     </head>
 
     <body>
@@ -40,7 +40,7 @@
       <div class="col s2">
 
 		<ul id="slide-out" class="side-nav fixed cyan lighten-3 side-nav-white">
-			<li class="profile-badge"><a href="#profile" class="circle"><i class="left"><img src="img/IMG_0421web-50.jpg" class="circle"></i>George H</a></li>
+			<li class="profile-badge"><a href="#profile" class="circle"><i class="left"><img src="assets/img/IMG_0421web-50.jpg" class="circle"></i>George H</a></li>
 			<hr class="hr-nav">
 			<li><a href="#!"><i class="mdi-action-lock left"></i>Private</a></li>
 			<li><a href="#!"><i class="mdi-file-cloud left"></i>Public</a></li>
@@ -72,7 +72,7 @@
 
           <div class="card">
             <div class="card-image">
-              <img src="img/cookies.jpg">
+              <img src="assets/img/cookies.jpg">
             </div>
             <div class="card-content">
 				<span class="card-title activator">Nestle Toll House Cookies</span>
@@ -109,7 +109,7 @@
 
 		  <div class="card">
             <div class="card-image">
-              <img src="img/cookies.jpg">
+              <img src="assets/img/cookies.jpg">
             </div>
             <div class="card-content">
 				<span class="card-title activator">NESTLE TOLL HOUSE Cookies</span>
@@ -129,7 +129,7 @@
 
 		  <div class="card">
             <div class="card-image">
-              <img src="img/cookies.jpg">
+              <img src="assets/img/cookies.jpg">
             </div>
             <div class="card-content">
 				<span class="card-title activator">NESTLE TOLL HOUSE Cookies</span>
@@ -157,9 +157,9 @@
 
 
       <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/init.js"></script>
+      <script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+      <script type="text/javascript" src="assets/js/init.js"></script>
       <script>
   		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
