@@ -9,6 +9,8 @@ import ly.whisk.health.ConnectionHealthCheck;
 import ly.whisk.resources.AuthorizeResource;
 import ly.whisk.resources.HealthCheckResource;
 import ly.whisk.resources.IndexResource;
+import ly.whisk.resources.RecipeResource;
+import ly.whisk.storage.APIStorage;
 
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 
@@ -37,9 +39,12 @@ public class SrmWebApplication extends Application<SrmWebConfiguration> {
 
 		final IndexResource index = new IndexResource();
 		environment.jersey().register(index);
-		
+
 		final AuthorizeResource auth = new AuthorizeResource();
 		environment.jersey().register(auth);
+
+		final RecipeResource recipe = new RecipeResource(new APIStorage());
+		environment.jersey().register(recipe);
 
 	}
 

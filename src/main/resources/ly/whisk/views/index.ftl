@@ -40,6 +40,7 @@
 
   window.onAmazonLoginReady = function() {
     amazon.Login.setClientId('amzn1.application-oa2-client.4aa9777d9d07427aa4509cd182b30c76');
+    
   };
   (function(d) {
     var a = d.createElement('script'); a.type = 'text/javascript';
@@ -47,9 +48,12 @@
     a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
     d.getElementById('amazon-root').appendChild(a);
   })(document);
-$(function() {
-    options = { scope : 'profile' };
-    window.amazon.Login.authorize(options, 'https://devo.whisk.ly/authorize');
+$(function(a) {
+    document.getElementById('LoginWithAmazon').onclick=function(){
+    	options = { scope : 'profile' };
+    
+    	amazon.Login.authorize(options, 'https://devo.whisk.ly/authorize');
+    };
 });
 </script>
 
