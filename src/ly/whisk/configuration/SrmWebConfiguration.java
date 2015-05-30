@@ -51,4 +51,8 @@ public class SrmWebConfiguration extends Configuration implements
 	public String getKMSKeyARN() {
 		return kmsKeyArn;
 	}
+
+	public boolean forwardHttps() {
+		return false;
+	}
 }

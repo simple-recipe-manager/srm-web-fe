@@ -99,68 +99,11 @@ $(function(a) {
 
           <div class="card">
             <div class="card-image">
-              <img src="/assets/img/cookies.jpg">
+              <img src="${recipe.defaultImageUrl}">
             </div>
             <div class="card-content">
-				<span class="card-title activator">Nestle Toll House Cookies</span>
-              	<p>Just break apart the pre-scored dough and bake. Each cookie is bursting with the NESTLE&reg; TOLL HOUSE&reg; Semi-Sweet Morsels you've loved for years.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Share</a>
-              <a href='#'>Open</a>
-            </div>
-          </div>
-
-
-
-		  <div class="card-space-div"></div>
-
-
-
-		  <div class="card">
-            <div class="card-content">
-				<span class="card-title activator">NESTLE TOLL HOUSE Cookies</span>
-              <p>Just break apart the pre-scored dough and bake. Each cookie is bursting with the NESTLE&reg; TOLL HOUSE&reg; Semi-Sweet Morsels you've loved for years.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Share</a>
-              <a href='#'>Open</a>
-            </div>
-          </div>
-
-
-
-		  <div class="card-space-div"></div>
-
-
-
-		  <div class="card">
-            <div class="card-image">
-              <img src="/assets/img/cookies.jpg">
-            </div>
-            <div class="card-content">
-				<span class="card-title activator">NESTLE TOLL HOUSE Cookies</span>
-              <p>Just break apart the pre-scored dough and bake. Each cookie is bursting with the NESTLE&reg; TOLL HOUSE&reg; Semi-Sweet Morsels you've loved for years.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Share</a>
-              <a href='#'>Open</a>
-            </div>
-          </div>
-
-
-
-		  <div class="card-space-div"></div>
-
-
-
-		  <div class="card">
-            <div class="card-image">
-              <img src="/assets/img/cookies.jpg">
-            </div>
-            <div class="card-content">
-				<span class="card-title activator">NESTLE TOLL HOUSE Cookies</span>
-              <p>Just break apart the pre-scored dough and bake. Each cookie is bursting with the NESTLE&reg; TOLL HOUSE&reg; Semi-Sweet Morsels you've loved for years.</p>
+				<span class="card-title activator">${recipe.recipeName}</span>
+              	<p></p>
             </div>
             <div class="card-action">
               <a href="#">Share</a>

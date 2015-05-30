@@ -9,6 +9,7 @@ public class SRMUser {
 
 	public SRMUser(AuthHolder holder) {
 		this.firstName = holder.getCognitoId();
+		
 	}
 
 	public String getFirstName() {
