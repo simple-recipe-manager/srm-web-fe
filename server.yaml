@@ -5,3 +5,7 @@ assets:
      /: assets/
   mimeTypes:
      json: application/json
+     
+kmsKeyArn : "arn:aws:kms:us-east-1:224842466274:key/8f2f0d9b-7083-4071-aa70-83e743c3ede4"
+
+region : "us-east-1"

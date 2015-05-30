@@ -11,8 +11,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
+
+import ly.whisk.auth.CookieHelper;
+import ly.whisk.auth.Encryptor;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Content;
@@ -23,12 +27,20 @@ import com.amazonaws.services.cognitoidentity.AmazonCognitoIdentity;
 import com.amazonaws.services.cognitoidentity.AmazonCognitoIdentityClient;
 import com.amazonaws.services.cognitoidentity.model.GetIdRequest;
 import com.amazonaws.services.cognitoidentity.model.GetIdResult;
+import com.amazonaws.services.cognitoidentity.model.GetOpenIdTokenRequest;
+import com.amazonaws.services.cognitoidentity.model.GetOpenIdTokenResult;
 import com.codahale.metrics.annotation.Timed;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Path("/authorize")
 public class AuthorizeResource {
+
+	private Encryptor encryptor;
+
+	public AuthorizeResource(Encryptor encryptor) {
+		this.encryptor = encryptor;
+	}
 
 	@GET
 	@Timed
@@ -60,9 +72,6 @@ public class AuthorizeResource {
 				new TypeReference<Map>() {
 				});
 
-		System.out.println(String.format("%s %s %s", m.get("name"),
-				m.get("email"), m.get("user_id")));
-
 		// initialize the Cognito identity client with a set
 		// of anonymous AWS credentials
 		AmazonCognitoIdentity identityClient = new AmazonCognitoIdentityClient(
@@ -76,7 +85,7 @@ public class AuthorizeResource {
 				.setIdentityPoolId("us-east-1:866d80cc-24e2-4c83-b6b4-f1c722310e23");
 		// If you are authenticating your users through an identity provider
 		// then you can set the Map of tokens in the request
-		Map providerTokens = new HashMap();
+		Map<String, String> providerTokens = new HashMap<String, String>();
 		providerTokens.put("www.amazon.com", access_token);
 		idRequest.setLogins(providerTokens);
 
@@ -84,10 +93,19 @@ public class AuthorizeResource {
 
 		String identityId = idResp.getIdentityId();
 
-		// TODO: At this point you should save this identifier so you won't
-		// have to make this call the next time a user connects
+		GetOpenIdTokenRequest getToken = new GetOpenIdTokenRequest();
+		getToken.setIdentityId(identityId);
 
-		return Response.seeOther(
-				UriBuilder.fromResource(IndexResource.class).build()).build();
+		getToken.setLogins(providerTokens);
+
+		GetOpenIdTokenResult tokenResult = identityClient
+				.getOpenIdToken(getToken);
+		String token = tokenResult.getToken();
+
+		NewCookie nc = CookieHelper.toNewCookie(identityId, token, encryptor);
+
+		return Response
+				.seeOther(UriBuilder.fromResource(IndexResource.class).build())
+				.cookie(nc).build();
 	}
 }
