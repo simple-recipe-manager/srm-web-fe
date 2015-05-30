@@ -31,7 +31,7 @@ public class CookieHelper {
 		Cookie cookie = new Cookie(COOKIE_NAME, encryptor.encrypt(mapper
 				.writeValueAsString(holder)));
 		NewCookie nc = new NewCookie(cookie, "for whiskly auth",
-				NewCookie.DEFAULT_MAX_AGE, true);
+				NewCookie.DEFAULT_MAX_AGE, false);
 
 		return nc;
 

@@ -67,7 +67,7 @@ $(function(a) {
     src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
     width="156" height="32" />
 </a></li>
-			<li class="profile-badge"><a href="#profile" class="circle"><i class="left"><img src="assets/img/IMG_0421web-50.jpg" class="circle"></i>George H</a></li>
+			<li class="profile-badge"><a href="#profile" class="circle"><i class="left"><img src="assets/img/IMG_0421web-50.jpg" class="circle"></i>${user.firstName?html}</a></li>
 			<hr class="hr-nav">
 			<li><a href="#!"><i class="mdi-action-lock left"></i>Private</a></li>
 			<li><a href="#!"><i class="mdi-file-cloud left"></i>Public</a></li>

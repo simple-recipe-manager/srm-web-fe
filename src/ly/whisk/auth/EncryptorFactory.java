@@ -1,6 +1,10 @@
 package ly.whisk.auth;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ly.whisk.configuration.SrmWebConfiguration;
+import ly.whisk.resources.RecipeResource;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.auth.AWSCredentials;
@@ -9,6 +13,8 @@ import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.services.kms.AWSKMSClient;
 
 public class EncryptorFactory {
+
+	private Logger log = LoggerFactory.getLogger(RecipeResource.class);
 
 	public Encryptor build(SrmWebConfiguration config) {
 		AWSCredentialsProvider provider = new InstanceProfileCredentialsProvider();
@@ -21,6 +27,7 @@ public class EncryptorFactory {
 			}
 		} catch (AmazonClientException ex) {
 		}
+		log.warn("USING DUMB ENCRYPTOR");
 		return new DumbEncryptor();
 	}
 }

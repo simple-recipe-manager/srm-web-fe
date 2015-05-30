@@ -16,6 +16,8 @@ import javax.ws.rs.core.NewCookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Optional;
+
 public final class WhisklyCookieAuthFactory<P> extends
 		AuthFactory<NewCookie, P> {
 
@@ -45,11 +47,14 @@ public final class WhisklyCookieAuthFactory<P> extends
 				if (cookies != null) {
 					for (Cookie c : cookies) {
 						if (c.getName().equals(CookieHelper.COOKIE_NAME)) {
-							authenticator().authenticate(
+							Optional<P> authed = authenticator().authenticate(
 									new NewCookie(new javax.ws.rs.core.Cookie(c
 											.getName(), c.getValue(), c
 											.getPath(), c.getDomain(), c
 											.getVersion())));
+							if (authed.isPresent()) {
+								return authed.get();
+							}
 						}
 					}
 				}
