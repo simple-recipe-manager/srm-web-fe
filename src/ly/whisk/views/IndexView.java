@@ -6,15 +6,8 @@ import com.google.common.base.Optional;
 
 public class IndexView extends BaseView {
 
-	private SRMUser user;
-
 	public IndexView(Optional<SRMUser> optional) {
-		super("index.ftl");
-		this.user = optional.or(SRMUser.guestSupplier());
+		super("index.ftl", optional);
 
-	}
-
-	public SRMUser getUser() {
-		return this.user;
 	}
 }

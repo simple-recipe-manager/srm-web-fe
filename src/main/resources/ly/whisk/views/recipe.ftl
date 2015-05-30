@@ -1,9 +1,9 @@
-<#-- @ftlvariable name="IndexView" type="ly.whisk.views.IndexView" -->
+<#-- @ftlvariable name="RecipeView" type="ly.whisk.views.RecipeView" -->
 <!doctype html>
 <html>
     <head>
 
-      <title>Whisk.ly Recipe Manager</title>
+      <title>${recipe.recipeName?html} - Whisk.ly</title>
       <meta name="description" content="Whisk.ly is the most convinient and secure way to store your recipes, new and old." />
 
       <!-- Schema.org markup for Google+ -->

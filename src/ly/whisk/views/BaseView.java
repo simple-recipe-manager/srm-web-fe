@@ -1,5 +1,8 @@
 package ly.whisk.views;
 
+import com.google.common.base.Optional;
+
+import ly.whisk.auth.SRMUser;
 import io.dropwizard.views.View;
 import io.swagger.client.api.RecipesApi;
 import io.swagger.client.api.SearchApi;
@@ -8,11 +11,22 @@ public abstract class BaseView extends View {
 
 	private RecipesApi recipes;
 	private SearchApi search;
+	private SRMUser user;
 
-	protected BaseView(String templateName) {
+	public SRMUser getUser() {
+		return user;
+	}
+
+	public void setUser(SRMUser user) {
+		this.user = user;
+	}
+
+	protected BaseView(String templateName, Optional<SRMUser> user) {
 		super(templateName);
 		this.recipes = new RecipesApi();
 		this.search = new SearchApi();
+
+		this.user = user.or(SRMUser.guestSupplier());
 	}
 
 	public RecipesApi getRecipes() {

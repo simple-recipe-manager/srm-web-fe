@@ -16,6 +16,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation.Builder;
 import javax.ws.rs.core.Link;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status.Family;
 
 import org.glassfish.jersey.client.ClientResponse;
@@ -193,20 +194,19 @@ public class ApiInvoker {
 				builder = builder.header(key, defaultHeaderMap.get(key));
 			}
 		}
-		ClientResponse response = null;
+		Response response = null;
 
 		if ("GET".equals(method)) {
-			response = (ClientResponse) builder.get(ClientResponse.class);
+
+			response = builder.get();
 		} else if ("POST".equals(method)) {
 			if (body == null) {
-				response = builder.post(null, ClientResponse.class);
-
+				response = builder.post(null);
 			} else
-				response = builder.accept(contentType).post(body,
-						ClientResponse.class);
+				response = builder.accept(contentType).post(body);
 		} else if ("PUT".equals(method)) {
 			if (body == null)
-				response = builder.put(body, ClientResponse.class);
+				response = builder.put(body);
 			else {
 				if ("application/x-www-form-urlencoded".equals(contentType)) {
 					StringBuilder formParamBuilder = new StringBuilder();
@@ -230,18 +230,15 @@ public class ApiInvoker {
 						}
 					}
 					response = builder.accept(contentType).put(
-							Entity.json(formParamBuilder.toString()),
-							ClientResponse.class);
+							Entity.json(formParamBuilder.toString()));
 				} else
-					response = builder.accept(contentType).put(body,
-							ClientResponse.class);
+					response = builder.accept(contentType).put(body);
 			}
 		} else if ("DELETE".equals(method)) {
 			if (body == null)
-				response = builder.delete(ClientResponse.class);
+				response = builder.delete();
 			else
-				response = builder.accept(contentType).delete(
-						ClientResponse.class);
+				response = builder.accept(contentType).delete();
 		} else {
 			throw new ApiException(500, "unknown method type " + method);
 		}
