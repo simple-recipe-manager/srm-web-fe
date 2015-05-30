@@ -52,7 +52,7 @@ $(function(a) {
     document.getElementById('LoginWithAmazon').onclick=function(){
     	options = { scope : 'profile' };
     
-    	amazon.Login.authorize(options, 'https://devo.whisk.ly/authorize');
+    	amazon.Login.authorize(options, window.location.protocol + '//' + window.location.host + '/authorize');
     };
 });
 </script>

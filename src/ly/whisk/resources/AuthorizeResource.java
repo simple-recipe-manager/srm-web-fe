@@ -41,8 +41,9 @@ public class AuthorizeResource {
 						+ URLEncoder.encode(access_token, "UTF-8")).execute()
 				.returnContent();
 
-		Map m = new ObjectMapper().readValue(c.toString(), new TypeReference<Map>() {
-		});
+		Map m = new ObjectMapper().readValue(c.toString(),
+				new TypeReference<Map>() {
+				});
 
 		if (!"amzn1.application-oa2-client.4aa9777d9d07427aa4509cd182b30c76"
 				.equals(m.get("aud"))) {
@@ -55,8 +56,9 @@ public class AuthorizeResource {
 				.addHeader("Authorization", "bearer " + access_token).execute()
 				.returnContent();
 
-		m = new ObjectMapper().readValue(c.toString(), new TypeReference<Map>() {
-		});
+		m = new ObjectMapper().readValue(c.toString(),
+				new TypeReference<Map>() {
+				});
 
 		System.out.println(String.format("%s %s %s", m.get("name"),
 				m.get("email"), m.get("user_id")));
@@ -85,8 +87,7 @@ public class AuthorizeResource {
 		// TODO: At this point you should save this identifier so you won't
 		// have to make this call the next time a user connects
 
-		return Response.ok()
-				.location(UriBuilder.fromResource(IndexResource.class).build())
-				.build();
+		return Response.seeOther(
+				UriBuilder.fromResource(IndexResource.class).build()).build();
 	}
 }
