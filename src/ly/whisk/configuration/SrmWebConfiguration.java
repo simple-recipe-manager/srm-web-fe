@@ -35,6 +35,11 @@ public class SrmWebConfiguration extends Configuration implements
 	@NotNull
 	private final EncryptorFactory encryptorFactory = new EncryptorFactory();
 
+	@Valid
+	@NotNull
+	@JsonProperty
+	private boolean redirectHttps;
+
 	@Override
 	public AssetsConfiguration getAssetsConfiguration() {
 		return assets;
@@ -53,6 +58,6 @@ public class SrmWebConfiguration extends Configuration implements
 	}
 
 	public boolean forwardHttps() {
-		return false;
+		return redirectHttps;
 	}
 }

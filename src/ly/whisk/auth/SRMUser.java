@@ -1,5 +1,6 @@
 package ly.whisk.auth;
 
+import com.amazonaws.services.cognitosync.AmazonCognitoSyncClient;
 import com.google.common.base.Supplier;
 
 public class SRMUser {
@@ -9,6 +10,7 @@ public class SRMUser {
 
 	public SRMUser(AuthHolder holder) {
 		this.firstName = holder.getCognitoId();
+		
 		
 	}
 

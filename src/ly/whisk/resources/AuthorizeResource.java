@@ -37,6 +37,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class AuthorizeResource {
 
 	private Encryptor encryptor;
+	private String loginWithAmazonURI;
+	private String loginWithAmazonClientId;
+	private String accountId;
+	private String identityPoolId;
 
 	public AuthorizeResource(Encryptor encryptor) {
 		this.encryptor = encryptor;

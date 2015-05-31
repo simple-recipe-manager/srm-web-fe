@@ -70,7 +70,7 @@ public class SrmWebApplication extends Application<SrmWebConfiguration> {
 
 			public void destroy() {
 			}
-		}), "*/*", EnumSet.of(DispatcherType.REQUEST));
+		}), "/*", EnumSet.allOf(DispatcherType.class));
 	}
 
 	@Override
