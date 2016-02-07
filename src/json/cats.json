@@ -1,0 +1,46 @@
+[
+  {
+    "cat_id": 0,
+    "category": "Appetizer"
+  },
+  {
+    "cat_id": 1,
+    "category": "Breakfast & Brunch"
+  },
+  {
+    "cat_id": 2,
+    "category": "Cocktails"
+  }
+  {
+    "cat_id": 3,
+    "category": "Desserts"
+  },
+  {
+    "cat_id": 4,
+    "category": "Drinks"
+  },
+  {
+    "cat_id": 5,
+    "category": "Main Dishes"
+  }
+  {
+    "cat_id": 6,
+    "category": "Pasta"
+  },
+  {
+    "cat_id": 7,
+    "category": "Salad"
+  },
+  {
+    "cat_id": 8,
+    "category": "Seafood"
+  }
+  {
+    "cat_id": 9,
+    "category": "Soup"
+  },
+  {
+    "cat_id": 10,
+    "category": "Vegetarian"
+  }
+]
